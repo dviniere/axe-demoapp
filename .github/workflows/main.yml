@@ -18,10 +18,10 @@ jobs:
        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       
     - name: Build the new release :latest
-      run: docker build -t hosniah/orsys-ccb:latest .
+      run: docker build -t dviniere/m2i-docker:latest .
 
     - name: Push to docker hub :latest
       uses: actions-hub/docker@master
       with:
-       args: push hosniah/orsys-ccb:latest
+       args: push dviniere/m2i-docker:latest
  
