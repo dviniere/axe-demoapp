@@ -18,10 +18,10 @@ jobs:
        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       
     - name: Build the new release :latest
-      run: docker build -t dviniere/m2i-docker:latest .
+      run: docker build -t dviniere/m2i-docker:1.0 .
 
     - name: Push to docker hub :latest
       uses: actions-hub/docker@master
       with:
-       args: push dviniere/m2i-docker:latest
+       args: push dviniere/m2i-docker:1.0
  
